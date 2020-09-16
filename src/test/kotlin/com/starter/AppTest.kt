@@ -13,10 +13,6 @@ object AppTest: Spek({
             it("2 + 3 equals 5") {
                 assertThat(2 + 3, equalTo(5))
             }
-
-            it("20 + 3 equals 23") {
-                assertThat(20 + 3, equalTo(23))
-            }
         }
     }
 })

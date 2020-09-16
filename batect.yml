@@ -5,14 +5,11 @@ containers:
   build-env:
     image: zenika/kotlin:1.3-alpine
     volumes:
-      - local: .
-        container: /code
-        options: cached
-      - local: .gradle
-        container: /home/container-user/.gradle
-        options: cached
+      - .:/code:cached
+      - .gradle:/home/container-user/.gradle:cached
     working_directory: /code
     environment:
+      HOSTNAME: $HOSTNAME
       GRADLE_OPTS: -Dorg.gradle.daemon=false
     run_as_current_user:
       enabled: true
