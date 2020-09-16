@@ -22,8 +22,14 @@ tasks:
       container: build-env
       command: sh
 
-  runApp:
+  run:
     description: Run app
     run:
       container: build-env
       command: ./gradlew run
+
+  test:
+    description: Run tests
+    run:
+      container: build-env
+      command: ./gradlew test
