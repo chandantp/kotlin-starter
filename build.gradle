@@ -13,11 +13,10 @@ apply plugin: 'application'
 mainClassName = 'com.starter.AppKt'
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 
-    compile 'org.spekframework.spek2:spek-dsl-jvm:2.0.9'
-    compile 'org.spekframework.spek2:spek-dsl-metadata:2.0.9'
-
+    testCompile 'org.spekframework.spek2:spek-dsl-jvm:2.0.9'
+    testCompile 'org.spekframework.spek2:spek-dsl-metadata:2.0.9'
     testCompile 'org.spekframework.spek2:spek-runner-junit5:2.0.9'
     testCompile 'com.natpryce:hamkrest:1.7.0.3'
 
