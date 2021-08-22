@@ -16,15 +16,5 @@ object AppTest: Spek({
                 assertThat(2 + 3, equalTo(5))
             }
         }
-
-        context("mocking foo") {
-
-            mockkStatic("com.starter.AppKt")
-            every { foo() } returns 123L
-
-            it("bar returns expected value") {
-                assertThat(bar(), equalTo(246L))
-            }
-        }
     }
 })
