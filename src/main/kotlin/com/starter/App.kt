@@ -37,6 +37,9 @@ fun main() {
 
     val concatRight = someList.foldRight("START", { it, acc -> "$acc:$it" })
     println("concatRight = $concatRight")
+
+    val pairListTransform = pairsList.map { (k, v) -> "$k:$v" }
+    println("pairListTransform = $pairListTransform")
 }
 
 
